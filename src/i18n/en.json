@@ -56,5 +56,31 @@
     "whyHamburgTitle": "Why Play Silver Age in Hamburg?",
     "whyHamburgDesc": "The Silver HH tournament series brings this fast-paced, accessible format to Hamburg with regular events, a welcoming community, and competitive play. The lower cost of entry and quick match times make it perfect for both new players and experienced competitors looking for dynamic gameplay.",
     "viewTournamentsButton": "View upcoming tournaments"
+  },
+  "imprint": {
+    "title": "Imprint",
+    "responsibleTitle": "Information pursuant to § 5 TMG",
+    "contactTitle": "Contact",
+    "email": "Email",
+    "disclaimerTitle": "Disclaimer",
+    "contentLiabilityTitle": "Liability for Content",
+    "contentLiabilityText": "As a service provider, we are responsible for our own content on these pages in accordance with § 7 (1) TMG under general law. However, according to §§ 8 to 10 TMG, we are not obligated as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.",
+    "linksLiabilityTitle": "Liability for Links",
+    "linksLiabilityText": "Our website contains links to external third-party websites over whose content we have no control. Therefore, we cannot assume any liability for this external content. The respective provider or operator of the pages is always responsible for the content of the linked pages."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "introTitle": "1. Privacy at a Glance",
+    "generalInfoTitle": "General Information",
+    "generalInfoText": "The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to personally identify you.",
+    "dataCollectionTitle": "2. Data Collection on This Website",
+    "responsiblePartyTitle": "Who is responsible for data collection on this website?",
+    "responsiblePartyText": "Data processing on this website is carried out by the website operator. You can find their contact details in the imprint of this website.",
+    "howWeCollectTitle": "How do we collect your data?",
+    "howWeCollectText": "Your data is collected on the one hand by you providing it to us. This may include data that you enter in a contact form, for example. Other data is automatically collected or collected with your consent when you visit the website through our IT systems. This is mainly technical data (e.g. internet browser, operating system or time of page access).",
+    "purposeTitle": "What do we use your data for?",
+    "purposeText": "Part of the data is collected to ensure error-free provision of the website. Other data may be used to analyze your user behavior.",
+    "rightsTitle": "What rights do you have regarding your data?",
+    "rightsText": "You have the right to receive information about the origin, recipient and purpose of your stored personal data free of charge at any time. You also have the right to request the correction or deletion of this data. If you have given consent to data processing, you can revoke this consent at any time for the future."
   }
 }

@@ -56,5 +56,31 @@
     "whyHamburgTitle": "Warum Silver Age in Hamburg spielen?",
     "whyHamburgDesc": "Die Silver HH Turnierserie bringt dieses schnelle, zugängliche Format nach Hamburg mit regelmäßigen Events, einer einladenden Community und kompetitivem Spiel. Die niedrigen Einstiegskosten und kurzen Match-Zeiten machen es perfekt sowohl für neue Spieler als auch erfahrene Wettkämpfer, die nach dynamischem Gameplay suchen.",
     "viewTournamentsButton": "Kommende Turniere ansehen"
+  },
+  "imprint": {
+    "title": "Impressum",
+    "responsibleTitle": "Angaben gemäß § 5 TMG",
+    "contactTitle": "Kontakt",
+    "email": "E-Mail",
+    "disclaimerTitle": "Haftungsausschluss",
+    "contentLiabilityTitle": "Haftung für Inhalte",
+    "contentLiabilityText": "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.",
+    "linksLiabilityTitle": "Haftung für Links",
+    "linksLiabilityText": "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich."
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "introTitle": "1. Datenschutz auf einen Blick",
+    "generalInfoTitle": "Allgemeine Hinweise",
+    "generalInfoText": "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.",
+    "dataCollectionTitle": "2. Datenerfassung auf dieser Website",
+    "responsiblePartyTitle": "Wer ist verantwortlich für die Datenerfassung auf dieser Website?",
+    "responsiblePartyText": "Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.",
+    "howWeCollectTitle": "Wie erfassen wir Ihre Daten?",
+    "howWeCollectText": "Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).",
+    "purposeTitle": "Wofür nutzen wir Ihre Daten?",
+    "purposeText": "Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.",
+    "rightsTitle": "Welche Rechte haben Sie bezüglich Ihrer Daten?",
+    "rightsText": "Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen."
   }
 }

@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { useTranslations } from "../../i18n/utils";
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: "de" } },
+    { params: { lang: "en" } }
+  ];
+}
+
+const { lang } = Astro.params as { lang: 'de' | 'en' };
+const t = useTranslations(lang);
+---
+<BaseLayout title={`${t('privacy.title')} – Silver HH`} lang={lang}>
+  <article class="card">
+    <h1>{t('privacy.title')}</h1>
+
+    <section style="margin-top:24px;">
+      <h2>{t('privacy.introTitle')}</h2>
+
+      <h3 style="margin-top:16px; font-size:1.1em;">{t('privacy.generalInfoTitle')}</h3>
+      <p>{t('privacy.generalInfoText')}</p>
+    </section>
+
+    <section style="margin-top:24px;">
+      <h2>{t('privacy.dataCollectionTitle')}</h2>
+
+      <h3 style="margin-top:16px; font-size:1.1em;">{t('privacy.responsiblePartyTitle')}</h3>
+      <p>{t('privacy.responsiblePartyText')}</p>
+
+      <h3 style="margin-top:16px; font-size:1.1em;">{t('privacy.howWeCollectTitle')}</h3>
+      <p>{t('privacy.howWeCollectText')}</p>
+
+      <h3 style="margin-top:16px; font-size:1.1em;">{t('privacy.purposeTitle')}</h3>
+      <p>{t('privacy.purposeText')}</p>
+
+      <h3 style="margin-top:16px; font-size:1.1em;">{t('privacy.rightsTitle')}</h3>
+      <p>{t('privacy.rightsText')}</p>
+    </section>
+  </article>
+</BaseLayout>

@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { useTranslations } from "../../i18n/utils";
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: "de" } },
+    { params: { lang: "en" } }
+  ];
+}
+
+const { lang } = Astro.params as { lang: 'de' | 'en' };
+const t = useTranslations(lang);
+---
+<BaseLayout title={`${t('imprint.title')} – Silver HH`} lang={lang}>
+  <article class="card">
+    <h1>{t('imprint.title')}</h1>
+
+    <section style="margin-top:24px;">
+      <h2>{t('imprint.responsibleTitle')}</h2>
+      <p>
+        Silver HH<br>
+        Hamburg, Deutschland
+      </p>
+    </section>
+
+    <section style="margin-top:24px;">
+      <h2>{t('imprint.contactTitle')}</h2>
+      <p>
+        {t('imprint.email')}: <a href="mailto:info@silver-hh.click">info@silver-hh.click</a>
+      </p>
+    </section>
+
+    <section style="margin-top:24px;">
+      <h2>{t('imprint.disclaimerTitle')}</h2>
+
+      <h3 style="margin-top:16px; font-size:1.1em;">{t('imprint.contentLiabilityTitle')}</h3>
+      <p>{t('imprint.contentLiabilityText')}</p>
+
+      <h3 style="margin-top:16px; font-size:1.1em;">{t('imprint.linksLiabilityTitle')}</h3>
+      <p>{t('imprint.linksLiabilityText')}</p>
+    </section>
+  </article>
+</BaseLayout>
