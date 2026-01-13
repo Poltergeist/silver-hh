@@ -16,11 +16,11 @@ An Astro-based static site for organizing and promoting Flesh and Blood Silver A
 
 ## Tech Stack
 
-- **Framework:** [Astro](https://astro.build) 4.x - Static site generator
+- **Framework:** [Astro](https://astro.build) 5.15.8 - Static site generator
 - **Content Management:** Astro Content Collections with Zod schema validation
 - **Styling:** Custom CSS with CSS variables (no framework)
-- **Deployment:** Static hosting (configure based on your platform)
-- **Node.js:** 18.14.1 or higher required
+- **Deployment:** GitHub Pages with custom domain
+- **Node.js:** 22.0.0 or higher required
 
 ### Key Technologies
 
@@ -32,7 +32,7 @@ An Astro-based static site for organizing and promoting Flesh and Blood Silver A
 
 Before you begin, ensure you have:
 
-- **Node.js** version 18.14.1 or higher
+- **Node.js** version 22.0.0 or higher
 - **pnpm** version 8.0.0 or higher
 
 Install pnpm if you don't have it:
@@ -44,7 +44,7 @@ curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 Check your versions:
 ```bash
-node --version  # Should be v18.14.1 or higher
+node --version  # Should be v22.0.0 or higher
 pnpm --version  # Should be 8.0.0 or higher
 ```
 
