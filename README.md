@@ -2,7 +2,7 @@
 
 An Astro-based static site for organizing and promoting Flesh and Blood Silver Age tournaments in Hamburg, Germany.
 
-**Live Site:** [https://silver-hh.click](https://silver-hh.click)
+**Live Site:** [https://www.silver-hh.click](https://www.silver-hh.click)
 
 ## Features
 
@@ -164,9 +164,9 @@ The site automatically deploys to GitHub Pages when changes are pushed to the `m
    - Source: GitHub Actions
    
 2. **Configure Custom Domain** (already configured):
-   - Custom domain: `silver-hh.click`
+   - Custom domain: `www.silver-hh.click`
    - CNAME file in `public/CNAME` (automatically deployed)
-   - DNS configuration: Add CNAME record pointing to `poltergeist.github.io`
+   - DNS configuration: Add CNAME record pointing `www.silver-hh.click` to `poltergeist.github.io`
 
 3. **Workflow** (`.github/workflows/deploy.yml`):
    - Triggers on push to `main` branch
@@ -195,7 +195,7 @@ This site is also compatible with:
 
 ### Site Configuration
 
-The site URL is configured in `astro.config.mjs` as `https://silver-hh.click`. Update this if deploying to a different domain.
+The site URL is configured in `astro.config.mjs` as `https://www.silver-hh.click`. Update this if deploying to a different domain.
 
 ## Contributing
 
