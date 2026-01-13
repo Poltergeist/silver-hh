@@ -73,16 +73,16 @@
     "title": "Privacy Policy",
     "introTitle": "1. Privacy at a Glance",
     "generalInfoTitle": "General Information",
-    "generalInfoText": "The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to personally identify you.",
+    "generalInfoText": "This website does not collect any personal data when you visit. No cookies are set and no tracking or analytics tools are used.",
     "dataCollectionTitle": "2. Data Collection on This Website",
     "responsiblePartyTitle": "Who is responsible for data collection on this website?",
     "responsiblePartyText": "Data processing on this website is carried out by the website operator. You can find their contact details in the imprint of this website.",
     "howWeCollectTitle": "How do we collect your data?",
-    "howWeCollectText": "Your data is collected on the one hand by you providing it to us. This may include data that you enter in a contact form, for example. Other data is automatically collected or collected with your consent when you visit the website through our IT systems. This is mainly technical data (e.g. internet browser, operating system or time of page access).",
+    "howWeCollectText": "This website does not automatically collect any data. When you register for tournaments via external links (e.g. Google Forms), your data is collected directly by those services. Please refer to the privacy policies of these external providers.",
     "purposeTitle": "What do we use your data for?",
-    "purposeText": "Part of the data is collected to ensure error-free provision of the website. Other data may be used to analyze your user behavior.",
+    "purposeText": "We do not collect any data about your website visit. Data you provide when registering for tournaments through external forms is used solely for organizing the tournaments.",
     "rightsTitle": "What rights do you have regarding your data?",
-    "rightsText": "You have the right to receive information about the origin, recipient and purpose of your stored personal data free of charge at any time. You also have the right to request the correction or deletion of this data. If you have given consent to data processing, you can revoke this consent at any time for the future."
+    "rightsText": "You have the right to receive information about the origin, recipient and purpose of your stored personal data free of charge at any time. You also have the right to request the correction or deletion of this data. Please contact us using the details provided in the imprint."
   },
   "about": {
     "badge": "About Us",
