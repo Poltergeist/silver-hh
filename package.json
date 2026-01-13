@@ -1,0 +1,18 @@
+{
+  "name": "silver-hh",
+  "type": "module",
+  "packageManager": "pnpm@8.0.0",
+  "engines": {
+    "node": ">=18.14.1",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "dependencies": {
+    "astro": "^4.0.0"
+  }
+}

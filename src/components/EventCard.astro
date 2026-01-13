@@ -1,0 +1,20 @@
+---
+const { entry } = Astro.props;
+const d = entry.data;
+const dateStr = d.date.toLocaleDateString("de-DE", { weekday: "short", year:"numeric", month:"short", day:"2-digit" });
+---
+<div class="card" style="padding:14px;">
+  <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+    <div>
+      <div class="badge">{d.format}</div>
+      <h3 style="margin:8px 0 6px 0;">{d.title}</h3>
+      <p style="margin:0;">{dateStr} • {d.startTime} • {d.venue}</p>
+      <p style="margin:0;">{d.address}</p>
+    </div>
+    <div style="display:flex; gap:10px; align-items:flex-start; flex-wrap:wrap;">
+      {d.registerUrl && <a class="btn primary" href={d.registerUrl}>Register</a>}
+      <a class="btn" href={`/events/${entry.slug}`}>Details</a>
+      {d.resultsUrl && <a class="btn" href={d.resultsUrl}>Results</a>}
+    </div>
+  </div>
+</div>

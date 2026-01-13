@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import EventCard from "../components/EventCard.astro";
+import { getCollection } from "astro:content";
+
+const events = await getCollection("events");
+const upcoming = events
+  .filter(e => e.data.date >= new Date())
+  .sort((a,b) => a.data.date.getTime() - b.data.date.getTime());
+
+const nextEvent = upcoming[0];
+---
+<BaseLayout title="Silver HH — Silver Age in Hamburg">
+  <section class="card">
+    <span class="badge">Flesh and Blood • Hamburg</span>
+    <h1>Silver HH</h1>
+    <p>
+      A tournament series for <strong>Silver Age</strong> — competitive games, clear structure,
+      and a welcoming community in Hamburg, Germany.
+    </p>
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+      {nextEvent?.data.registerUrl && (
+        <a class="btn primary" href={nextEvent.data.registerUrl}>Register for the next event →</a>
+      )}
+      <a class="btn" href="/events">View schedule</a>
+      <a class="btn" href="/silver-age">What is Silver Age?</a>
+    </div>
+  </section>
+
+  {nextEvent && (
+    <section style="margin-top:16px;" class="card">
+      <h2 style="margin:0 0 10px 0;">Next event</h2>
+      <EventCard entry={nextEvent} />
+    </section>
+  )}
+
+  <section style="margin-top:16px;" class="grid cols-3">
+    <div class="card">
+      <h3>Silver Age format</h3>
+      <p>Classic Constructed with a curated card pool — fresh meta, lower barrier to entry.</p>
+    </div>
+    <div class="card">
+      <h3>Hamburg community</h3>
+      <p>Local series, consistent organization, and space to grow new players.</p>
+    </div>
+    <div class="card">
+      <h3>Competitive & fair</h3>
+      <p>Clear announcements, transparent rulings, and clean event flow.</p>
+    </div>
+  </section>
+</BaseLayout>

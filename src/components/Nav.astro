@@ -1,0 +1,35 @@
+---
+import logo from "../assets/logo.png";
+---
+<nav class="container" style="display:flex;align-items:center;gap:20px;">
+<a
+    href="/"
+    style="
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+    "
+  >
+<img
+  src={logo.src}
+  alt="Silver HH"
+  width="44"
+  height="44"
+  style="
+    display:block;
+    border-radius: 8px;
+    box-shadow:
+      0 0 0 1px rgba(215,221,228,0.25),
+      0 6px 20px rgba(0,0,0,0.4);
+  "
+/>
+    <span>Silver HH</span>
+  </a>
+  <div style="margin-left:auto;display:flex;gap:16px;">
+    <a href="/events">Events</a>
+    <a href="/standings">Standings</a>
+    <a href="/silver-age">Silver Age</a>
+    <a href="/about">About</a>
+  </div>
+</nav>
