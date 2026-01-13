@@ -19,6 +19,8 @@ const dateStr = d.date.toLocaleDateString("de-DE", {
   month: "long",
   year: "numeric",
 });
+
+const isEventPast = d.date < new Date();
 ---
 
 <BaseLayout title={`${d.title} – Silver HH`}>
@@ -37,7 +39,7 @@ const dateStr = d.date.toLocaleDateString("de-DE", {
       {d.registerUrl && (
         <a class="btn primary" href={d.registerUrl}>Register</a>
       )}
-      {d.resultsUrl && (
+      {d.resultsUrl && isEventPast && (
         <a class="btn" href={d.resultsUrl}>Results</a>
       )}
     </div>

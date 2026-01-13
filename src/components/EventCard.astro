@@ -2,6 +2,7 @@
 const { entry } = Astro.props;
 const d = entry.data;
 const dateStr = d.date.toLocaleDateString("de-DE", { weekday: "short", year:"numeric", month:"short", day:"2-digit" });
+const isEventPast = d.date < new Date();
 ---
 <div class="card" style="padding:14px;">
   <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
@@ -14,7 +15,7 @@ const dateStr = d.date.toLocaleDateString("de-DE", { weekday: "short", year:"num
     <div style="display:flex; gap:10px; align-items:flex-start; flex-wrap:wrap;">
       {d.registerUrl && <a class="btn primary" href={d.registerUrl}>Register</a>}
       <a class="btn" href={`/events/${entry.slug}`}>Details</a>
-      {d.resultsUrl && <a class="btn" href={d.resultsUrl}>Results</a>}
+      {d.resultsUrl && isEventPast && <a class="btn" href={d.resultsUrl}>Results</a>}
     </div>
   </div>
 </div>
