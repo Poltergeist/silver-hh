@@ -2,7 +2,7 @@
 
 An Astro-based static site for organizing and promoting Flesh and Blood Silver Age tournaments in Hamburg, Germany.
 
-**Live Site:** [https://silver-hh.click](https://silver-hh.click)
+**Live Site:** [https://www.silver-hh.click](https://www.silver-hh.click)
 
 ## Features
 
@@ -16,11 +16,11 @@ An Astro-based static site for organizing and promoting Flesh and Blood Silver A
 
 ## Tech Stack
 
-- **Framework:** [Astro](https://astro.build) 4.x - Static site generator
+- **Framework:** [Astro](https://astro.build) 5.15.8 - Static site generator
 - **Content Management:** Astro Content Collections with Zod schema validation
 - **Styling:** Custom CSS with CSS variables (no framework)
-- **Deployment:** Static hosting (configure based on your platform)
-- **Node.js:** 18.14.1 or higher required
+- **Deployment:** GitHub Pages with custom domain
+- **Node.js:** 22.0.0 or higher required
 
 ### Key Technologies
 
@@ -32,7 +32,7 @@ An Astro-based static site for organizing and promoting Flesh and Blood Silver A
 
 Before you begin, ensure you have:
 
-- **Node.js** version 18.14.1 or higher
+- **Node.js** version 22.0.0 or higher
 - **pnpm** version 8.0.0 or higher
 
 Install pnpm if you don't have it:
@@ -44,7 +44,7 @@ curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 Check your versions:
 ```bash
-node --version  # Should be v18.14.1 or higher
+node --version  # Should be v22.0.0 or higher
 pnpm --version  # Should be 8.0.0 or higher
 ```
 
@@ -151,7 +151,31 @@ Common scopes for this project:
 
 ## Deployment
 
-This is a static site that can be deployed to any static hosting platform:
+This is a static site deployed to **GitHub Pages** with a custom domain.
+
+### Automated Deployment (GitHub Pages)
+
+The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch.
+
+**Setup Requirements:**
+
+1. **Enable GitHub Pages** in repository settings:
+   - Go to Settings → Pages
+   - Source: GitHub Actions
+   
+2. **Configure Custom Domain** (already configured):
+   - Custom domain: `www.silver-hh.click`
+   - CNAME file in `public/CNAME` (automatically deployed)
+   - DNS configuration: Add CNAME record pointing `www.silver-hh.click` to `poltergeist.github.io`
+
+3. **Workflow** (`.github/workflows/deploy.yml`):
+   - Triggers on push to `main` branch
+   - Can also be manually triggered from Actions tab
+   - Builds site with `pnpm build`
+   - Deploys to GitHub Pages automatically
+
+**Manual Deployment:**
+You can manually trigger deployment from the GitHub Actions tab by selecting "Deploy to GitHub Pages" and clicking "Run workflow".
 
 ### Build for Production
 
@@ -161,18 +185,17 @@ pnpm build
 
 This generates static files in the `dist/` directory.
 
-### Deployment Platforms
+### Alternative Deployment Platforms
 
-Compatible with:
-- **Netlify** - Drop the `dist/` folder or connect your Git repository (build command: `pnpm build`)
+This site is also compatible with:
+- **Netlify** - Connect Git repository (build command: `pnpm build`)
 - **Vercel** - Import project and set build command to `pnpm build`
-- **GitHub Pages** - Deploy the `dist/` folder
 - **Cloudflare Pages** - Connect repository with build command `pnpm build`
 - Any static hosting service
 
 ### Site Configuration
 
-The site URL is configured in `astro.config.mjs` as `https://silver-hh.click`. Update this if deploying to a different domain.
+The site URL is configured in `astro.config.mjs` as `https://www.silver-hh.click`. Update this if deploying to a different domain.
 
 ## Contributing
 
