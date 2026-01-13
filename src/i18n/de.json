@@ -97,5 +97,13 @@
     "joinUsTitle": "Mach mit",
     "joinUsText": "Egal, ob du ein erfahrener Spieler bist oder gerade erst anfängst, du bist eingeladen, an Silver HH teilzunehmen. Komm zu einem unserer kommenden Turniere vorbei, triff die Community und spiele Flesh and Blood – und wisse, dass du mit jedem Spiel etwas Gutes tust.",
     "viewEventsButton": "Kommende Events ansehen"
+  },
+  "notFound": {
+    "title": "404 — Seite nicht gefunden",
+    "heading": "404",
+    "message": "Die gesuchte Seite existiert nicht.",
+    "description": "Möglicherweise wurde die Seite verschoben, gelöscht oder die URL wurde falsch eingegeben.",
+    "homeButton": "Zur Startseite",
+    "eventsButton": "Events ansehen"
   }
 }
