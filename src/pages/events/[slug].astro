@@ -21,6 +21,8 @@ const dateStr = d.date.toLocaleDateString("de-DE", {
 });
 
 const isEventPast = d.date < new Date();
+
+const { Content } = await event.render();
 ---
 
 <BaseLayout title={`${d.title} – Silver HH`}>
@@ -47,7 +49,7 @@ const isEventPast = d.date < new Date();
     <hr style="border-color:var(--border); margin:20px 0;" />
 
     <div class="prose">
-      <slot />
+      <Content />
     </div>
   </article>
 </BaseLayout>
