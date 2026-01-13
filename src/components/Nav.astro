@@ -1,9 +1,19 @@
 ---
 import logo from "../assets/logo.png";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+import { useTranslations } from "../i18n/utils";
+
+interface Props {
+  lang: 'de' | 'en';
+  currentPath: string;
+}
+
+const { lang, currentPath } = Astro.props;
+const t = useTranslations(lang);
 ---
 <nav class="container" style="display:flex;align-items:center;gap:20px;">
 <a
-    href="/"
+    href={`/${lang}`}
     style="
       display: flex;
       align-items: center;
@@ -26,10 +36,11 @@ import logo from "../assets/logo.png";
 />
     <span>Silver HH</span>
   </a>
-  <div style="margin-left:auto;display:flex;gap:16px;">
-    <a href="/events">Events</a>
-    <a href="/standings">Standings</a>
-    <a href="/silver-age">Silver Age</a>
-    <a href="/about">About</a>
+  <div style="margin-left:auto;display:flex;gap:16px;align-items:center;">
+    <a href={`/${lang}/events`}>{t('nav.events')}</a>
+    <a href={`/${lang}/standings`}>{t('nav.standings')}</a>
+    <a href={`/${lang}/silver-age`}>{t('nav.silverAge')}</a>
+    <a href={`/${lang}/about`}>{t('nav.about')}</a>
+    <LanguageSwitcher currentLang={lang} currentPath={currentPath} />
   </div>
 </nav>

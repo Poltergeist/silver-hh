@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "events": "Events",
+    "standings": "Standings",
+    "silverAge": "Silver Age",
+    "about": "Über uns"
+  },
+  "homepage": {
+    "badge": "Flesh and Blood • Hamburg",
+    "title": "Silver HH",
+    "subtitle": "Eine Turnierserie für Silver Age — kompetitive Spiele, klare Struktur und eine einladende Community in Hamburg, Deutschland.",
+    "registerButton": "Für das nächste Event registrieren →",
+    "viewSchedule": "Zeitplan ansehen",
+    "whatIsSilverAge": "Was ist Silver Age?",
+    "nextEvent": "Nächstes Event",
+    "silverAgeFormat": "Silver Age Format",
+    "silverAgeFormatDesc": "Classic Constructed mit ausgewähltem Kartenpool — frische Meta, niedrige Einstiegshürde.",
+    "hamburgCommunity": "Hamburg Community",
+    "hamburgCommunityDesc": "Lokale Serie, konstante Organisation und Raum für neue Spieler.",
+    "competitiveFair": "Kompetitiv & Fair",
+    "competitiveFairDesc": "Klare Ankündigungen, transparente Entscheidungen und sauberer Event-Ablauf."
+  },
+  "events": {
+    "title": "Events",
+    "subtitle": "Alle Silver HH Turniere, vergangene und kommende.",
+    "registerButton": "Registrieren",
+    "detailsButton": "Details",
+    "resultsButton": "Ergebnisse"
+  },
+  "footer": {
+    "copyright": "© Silver HH",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "silverAge": {
+    "badge": "Format Übersicht",
+    "title": "Was ist Silver Age?",
+    "intro": "Silver Age ist ein zugängliches, schnelles Flesh and Blood Format für kurze, intensive Matches. Es umfasst junge Helden, niedrigere Lebenspunkte und strategische Deck-Auswahl aus einem begrenzten Kartenpool, was es perfekt für kompetitives Spiel mit niedriger Einstiegshürde macht.",
+    "howItWorks": "Wie es funktioniert",
+    "youngHeroesTitle": "Nur junge Helden",
+    "youngHeroesDesc": "Spiele mit jungen Heldenkarten (common, rare oder basic Seltenheit). Die niedrigeren Lebenspunkte sorgen für schnellere, aggressivere Spiele, die sich auf effiziente Züge und schnelle Entscheidungen konzentrieren.",
+    "strategicSelectionTitle": "Strategische Kartenauswahl",
+    "strategicSelectionDesc": "Erstelle einen Pool von 55 Karten inklusive deinem Helden, Waffen, Ausrüstung und Deck-Karten. Zu Beginn jedes Spiels wählst du genau 40 Karten aus diesem Pool aus, um deine Strategie anzupassen.",
+    "accessibleRaritiesTitle": "Zugängliche Kartenseltenheiten",
+    "accessibleRaritiesDesc": "Nur common, rare und basic Seltenheitskarten sind erlaubt. Das hält die Deck-Kosten niedriger und macht das Format zugänglicher, während es die kompetitive Tiefe beibehält.",
+    "deckConstructionTitle": "Deck-Konstruktion",
+    "deckConstructionLine1": "55 Karten insgesamt: 1 junger Held, Waffen, Ausrüstung und Deck-Karten.",
+    "deckConstructionLine2": "Kartenlimits: Bis zu 2 Kopien jeder einzigartigen Karte (nicht 3).",
+    "deckConstructionLine3": "Spielauswahl: Wähle genau 40 Karten aus deinem Pool für jedes Match.",
+    "matchFormatTitle": "Match-Format",
+    "matchFormatDesc": "Best-of-1 Spiele mit 35-Minuten-Runden. Zeige Helden, bestimme den ersten Spieler, wähle dein 40-Karten-Deck, ziehe dann Karten gleich dem Intellekt deines Helden zum Beginn.",
+    "officialResourcesTitle": "Offizielle Ressourcen",
+    "officialResourcesDesc": "Für vollständige Regeln, legalen Kartenpool und die neuesten Updates zum Silver Age Format:",
+    "officialResourcesButton": "Offizielle Silver Age Format Seite →",
+    "whyHamburgTitle": "Warum Silver Age in Hamburg spielen?",
+    "whyHamburgDesc": "Die Silver HH Turnierserie bringt dieses schnelle, zugängliche Format nach Hamburg mit regelmäßigen Events, einer einladenden Community und kompetitivem Spiel. Die niedrigen Einstiegskosten und kurzen Match-Zeiten machen es perfekt sowohl für neue Spieler als auch erfahrene Wettkämpfer, die nach dynamischem Gameplay suchen.",
+    "viewTournamentsButton": "Kommende Turniere ansehen"
+  }
+}

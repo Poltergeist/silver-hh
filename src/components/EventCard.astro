@@ -1,7 +1,26 @@
 ---
-const { entry } = Astro.props;
+import type { CollectionEntry } from "astro:content";
+import { useTranslations } from "../i18n/utils";
+import { formatEventDate } from "../utils/date";
+
+interface Props {
+  entry: CollectionEntry<"events">;
+  lang: 'de' | 'en';
+}
+
+const { entry, lang } = Astro.props;
 const d = entry.data;
-const dateStr = d.date.toLocaleDateString("de-DE", { weekday: "short", year:"numeric", month:"short", day:"2-digit" });
+const t = useTranslations(lang);
+
+// Remove language prefix from slug (e.g., "de/2025-02-15" -> "2025-02-15")
+const eventSlug = entry.slug.replace(/^(de|en)\//, '');
+
+const dateStr = formatEventDate(d.date, lang, {
+  weekday: "short",
+  year: "numeric",
+  month: "short",
+  day: "2-digit",
+});
 const isEventPast = d.date < new Date();
 ---
 <div class="card" style="padding:14px;">
@@ -13,9 +32,9 @@ const isEventPast = d.date < new Date();
       <p style="margin:0;">{d.address}</p>
     </div>
     <div style="display:flex; gap:10px; align-items:flex-start; flex-wrap:wrap;">
-      {d.registerUrl && <a class="btn primary" href={d.registerUrl}>Register</a>}
-      <a class="btn" href={`/events/${entry.slug}`}>Details</a>
-      {d.resultsUrl && isEventPast && <a class="btn" href={d.resultsUrl}>Results</a>}
+      {d.registerUrl && <a class="btn primary" href={d.registerUrl}>{t('events.registerButton')}</a>}
+      <a class="btn" href={`/${lang}/events/${eventSlug}`}>{t('events.detailsButton')}</a>
+      {d.resultsUrl && isEventPast && <a class="btn" href={d.resultsUrl}>{t('events.resultsButton')}</a>}
     </div>
   </div>
 </div>

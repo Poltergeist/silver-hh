@@ -14,6 +14,7 @@ const events = defineCollection({
     playerCap: z.number().optional(),
     registerUrl: z.string().url().optional(),
     resultsUrl: z.string().url().optional(),
+    lang: z.enum(["de", "en"]),
   }),
 });
 

@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { useTranslations } from "../../i18n/utils";
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: "de" } },
+    { params: { lang: "en" } }
+  ];
+}
+
+const { lang } = Astro.params as { lang: 'de' | 'en' };
+const t = useTranslations(lang);
+---
+<BaseLayout title={`${t('silverAge.title')} — Silver HH`} lang={lang}>
+  <section class="card">
+    <span class="badge">{t('silverAge.badge')}</span>
+    <h1>{t('silverAge.title')}</h1>
+    <p>
+      <strong>Silver Age</strong> {t('silverAge.intro')}
+    </p>
+  </section>
+
+  <section style="margin-top:16px;" class="card">
+    <h2>{t('silverAge.howItWorks')}</h2>
+    <div style="margin-top:12px;">
+      <h3 style="margin-bottom:8px;">{t('silverAge.youngHeroesTitle')}</h3>
+      <p>{t('silverAge.youngHeroesDesc')}</p>
+
+      <h3 style="margin-top:16px; margin-bottom:8px;">{t('silverAge.strategicSelectionTitle')}</h3>
+      <p>{t('silverAge.strategicSelectionDesc')}</p>
+
+      <h3 style="margin-top:16px; margin-bottom:8px;">{t('silverAge.accessibleRaritiesTitle')}</h3>
+      <p>{t('silverAge.accessibleRaritiesDesc')}</p>
+    </div>
+  </section>
+
+  <section style="margin-top:16px;" class="grid cols-2">
+    <div class="card">
+      <h3>{t('silverAge.deckConstructionTitle')}</h3>
+      <p>
+        <strong>{t('silverAge.deckConstructionLine1')}</strong><br>
+        <strong>{t('silverAge.deckConstructionLine2')}</strong><br>
+        <strong>{t('silverAge.deckConstructionLine3')}</strong>
+      </p>
+    </div>
+    <div class="card">
+      <h3>{t('silverAge.matchFormatTitle')}</h3>
+      <p>{t('silverAge.matchFormatDesc')}</p>
+    </div>
+  </section>
+
+  <section style="margin-top:16px;" class="card">
+    <h2>{t('silverAge.officialResourcesTitle')}</h2>
+    <p style="margin-bottom:12px;">{t('silverAge.officialResourcesDesc')}</p>
+    <a class="btn primary" href="https://fabtcg.com/gameplay-formats/silver-age/" target="_blank" rel="noopener noreferrer">
+      {t('silverAge.officialResourcesButton')}
+    </a>
+  </section>
+
+  <section style="margin-top:16px;" class="card">
+    <h2>{t('silverAge.whyHamburgTitle')}</h2>
+    <p>{t('silverAge.whyHamburgDesc')}</p>
+    <a class="btn" href={`/${lang}/events`} style="margin-top:12px; display:inline-block;">
+      {t('silverAge.viewTournamentsButton')}
+    </a>
+  </section>
+</BaseLayout>

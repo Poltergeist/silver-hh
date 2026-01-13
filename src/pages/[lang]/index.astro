@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EventCard from "../../components/EventCard.astro";
+import { getCollection } from "astro:content";
+import { useTranslations } from "../../i18n/utils";
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: "de" } },
+    { params: { lang: "en" } }
+  ];
+}
+
+const { lang } = Astro.params as { lang: 'de' | 'en' };
+const t = useTranslations(lang);
+
+const allEvents = await getCollection("events");
+const events = allEvents.filter(e => e.data.lang === lang);
+const upcoming = events
+  .filter(e => e.data.date >= new Date())
+  .sort((a,b) => a.data.date.getTime() - b.data.date.getTime());
+
+const nextEvent = upcoming[0];
+---
+<BaseLayout title={`${t('homepage.title')} — Silver Age in Hamburg`} lang={lang}>
+  <section class="card">
+    <span class="badge">{t('homepage.badge')}</span>
+    <h1>{t('homepage.title')}</h1>
+    <p>{t('homepage.subtitle')}</p>
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+      {nextEvent?.data.registerUrl && (
+        <a class="btn primary" href={nextEvent.data.registerUrl}>
+          {t('homepage.registerButton')}
+        </a>
+      )}
+      <a class="btn" href={`/${lang}/events`}>{t('homepage.viewSchedule')}</a>
+      <a class="btn" href={`/${lang}/silver-age`}>{t('homepage.whatIsSilverAge')}</a>
+    </div>
+  </section>
+
+  {nextEvent && (
+    <section style="margin-top:16px;" class="card">
+      <h2 style="margin:0 0 10px 0;">{t('homepage.nextEvent')}</h2>
+      <EventCard entry={nextEvent} lang={lang} />
+    </section>
+  )}
+
+  <section style="margin-top:16px;" class="grid cols-3">
+    <div class="card">
+      <h3>{t('homepage.silverAgeFormat')}</h3>
+      <p>{t('homepage.silverAgeFormatDesc')}</p>
+    </div>
+    <div class="card">
+      <h3>{t('homepage.hamburgCommunity')}</h3>
+      <p>{t('homepage.hamburgCommunityDesc')}</p>
+    </div>
+    <div class="card">
+      <h3>{t('homepage.competitiveFair')}</h3>
+      <p>{t('homepage.competitiveFairDesc')}</p>
+    </div>
+  </section>
+</BaseLayout>

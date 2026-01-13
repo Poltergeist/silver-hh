@@ -1,2 +1,12 @@
 import { defineConfig } from 'astro/config';
-export default defineConfig({ site: 'https://silver-hh.click' });
+
+export default defineConfig({
+  site: 'https://silver-hh.click',
+  i18n: {
+    defaultLocale: "de",
+    locales: ["de", "en"],
+    routing: {
+      prefixDefaultLocale: true
+    }
+  }
+});

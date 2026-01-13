@@ -1,8 +1,18 @@
+---
+import { useTranslations } from "../i18n/utils";
+
+interface Props {
+  lang: 'de' | 'en';
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
 <footer class="container" style="opacity:.7;font-size:14px;">
   <hr style="border-color:var(--border);margin:20px 0;">
   <div style="display:flex;gap:14px;">
-    <span>© Silver HH</span>
-    <a href="/imprint">Imprint</a>
-    <a href="/privacy">Privacy</a>
+    <span>{t('footer.copyright')}</span>
+    <a href={`/${lang}/imprint`}>{t('footer.imprint')}</a>
+    <a href={`/${lang}/privacy`}>{t('footer.privacy')}</a>
   </div>
 </footer>

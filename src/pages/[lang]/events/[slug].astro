@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { useTranslations } from "../../../i18n/utils";
+import { formatEventDate } from "../../../utils/date";
+
+export async function getStaticPaths() {
+  const events = await getCollection("events");
+  return events.map(entry => {
+    const slug = entry.slug.replace(/^(de|en)\//, '');
+    return {
+      params: {
+        lang: entry.data.lang,
+        slug: slug
+      }
+    };
+  });
+}
+
+const { lang, slug } = Astro.params as { lang: 'de' | 'en'; slug: string };
+const t = useTranslations(lang);
+
+// Query the event directly using the slug and lang
+const allEvents = await getCollection("events");
+const entry = allEvents.find(e => {
+  const eventSlug = e.slug.replace(/^(de|en)\//, '');
+  return eventSlug === slug && e.data.lang === lang;
+});
+
+if (!entry || !entry.data) {
+  throw new Error(`Event not found for slug: ${slug}, lang: ${lang}`);
+}
+
+// Access data before rendering
+const d = entry.data;
+const { Content } = await entry.render();
+
+if (!d || !d.date) {
+  throw new Error(`Invalid event data for slug: ${slug}, lang: ${lang}. Data: ${JSON.stringify(d)}`);
+}
+
+const dateStr = formatEventDate(d.date, lang, {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+<BaseLayout title={`${d.title} – Silver HH`} lang={lang}>
+  <article class="card">
+    <h1>{d.title}</h1>
+    <p><time datetime={d.date.toISOString()}>{dateStr}</time> • {d.startTime}</p>
+    <p>{d.venue}<br />{d.address}</p>
+
+    <div style="display:flex;gap:10px;margin:16px 0;">
+      {d.registerUrl && (
+        <a class="btn primary" href={d.registerUrl}>{t('events.registerButton')}</a>
+      )}
+      {d.resultsUrl && (
+        <a class="btn" href={d.resultsUrl}>{t('events.resultsButton')}</a>
+      )}
+    </div>
+
+    <Content />
+  </article>
+</BaseLayout>

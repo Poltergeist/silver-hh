@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "Home",
+    "events": "Events",
+    "standings": "Standings",
+    "silverAge": "Silver Age",
+    "about": "About"
+  },
+  "homepage": {
+    "badge": "Flesh and Blood • Hamburg",
+    "title": "Silver HH",
+    "subtitle": "A tournament series for Silver Age — competitive games, clear structure, and a welcoming community in Hamburg, Germany.",
+    "registerButton": "Register for the next event →",
+    "viewSchedule": "View schedule",
+    "whatIsSilverAge": "What is Silver Age?",
+    "nextEvent": "Next event",
+    "silverAgeFormat": "Silver Age format",
+    "silverAgeFormatDesc": "Classic Constructed with a curated card pool — fresh meta, lower barrier to entry.",
+    "hamburgCommunity": "Hamburg community",
+    "hamburgCommunityDesc": "Local series, consistent organization, and space to grow new players.",
+    "competitiveFair": "Competitive & fair",
+    "competitiveFairDesc": "Clear announcements, transparent rulings, and clean event flow."
+  },
+  "events": {
+    "title": "Events",
+    "subtitle": "All Silver HH tournaments, past and upcoming.",
+    "registerButton": "Register",
+    "detailsButton": "Details",
+    "resultsButton": "Results"
+  },
+  "footer": {
+    "copyright": "© Silver HH",
+    "imprint": "Imprint",
+    "privacy": "Privacy"
+  },
+  "silverAge": {
+    "badge": "Format Overview",
+    "title": "What is Silver Age?",
+    "intro": "Silver Age is an accessible, fast-paced Flesh and Blood format designed for quick, intense matches. It features young heroes, lower life totals, and strategic deck selection from a limited card pool, making it perfect for competitive play with a lower barrier to entry.",
+    "howItWorks": "How It Works",
+    "youngHeroesTitle": "Young Heroes Only",
+    "youngHeroesDesc": "Play with young hero cards (common, rare, or basic rarity). The lower life totals create faster, more aggressive games that focus on efficient plays and quick decision-making.",
+    "strategicSelectionTitle": "Strategic Card Selection",
+    "strategicSelectionDesc": "Build a 55-card pool including your hero, weapons, equipment, and deck cards. At the start of each game, you select exactly 40 cards from this pool to use in that match, allowing you to adapt your strategy.",
+    "accessibleRaritiesTitle": "Accessible Card Rarities",
+    "accessibleRaritiesDesc": "Only common, rare, and basic rarity cards are legal. This keeps deck costs lower and makes the format more accessible while maintaining competitive depth.",
+    "deckConstructionTitle": "Deck Construction",
+    "deckConstructionLine1": "55 total cards: 1 young hero, weapons, equipment, and deck cards.",
+    "deckConstructionLine2": "Card limits: Up to 2 copies of each unique card (not 3).",
+    "deckConstructionLine3": "Game selection: Choose exactly 40 cards from your pool each match.",
+    "matchFormatTitle": "Match Format",
+    "matchFormatDesc": "Best-of-1 games with 35-minute rounds. Reveal heroes, determine first player, select your 40-card deck, then draw cards equal to your hero's intellect to begin.",
+    "officialResourcesTitle": "Official Resources",
+    "officialResourcesDesc": "For complete rules, legal card pool, and the latest updates to the Silver Age format:",
+    "officialResourcesButton": "Official Silver Age Format Page →",
+    "whyHamburgTitle": "Why Play Silver Age in Hamburg?",
+    "whyHamburgDesc": "The Silver HH tournament series brings this fast-paced, accessible format to Hamburg with regular events, a welcoming community, and competitive play. The lower cost of entry and quick match times make it perfect for both new players and experienced competitors looking for dynamic gameplay.",
+    "viewTournamentsButton": "View upcoming tournaments"
+  }
+}

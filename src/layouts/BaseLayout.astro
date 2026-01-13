@@ -1,20 +1,34 @@
 ---
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
-const { title = "Silver HH" } = Astro.props;
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang: 'de' | 'en';
+}
+
+const { title = "Silver HH", description, lang } = Astro.props;
+const currentPath = Astro.url.pathname.replace(/^\/(de|en)/, '');
 ---
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+
+    <link rel="alternate" hreflang="de" href={`https://silver-hh.click/de${currentPath}`} />
+    <link rel="alternate" hreflang="en" href={`https://silver-hh.click/en${currentPath}`} />
+    <link rel="alternate" hreflang="x-default" href={`https://silver-hh.click/de${currentPath}`} />
+
     <link rel="stylesheet" href="/styles/global.css" />
   </head>
   <body>
-    <Nav />
+    <Nav lang={lang} currentPath={currentPath} />
     <main class="container">
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>

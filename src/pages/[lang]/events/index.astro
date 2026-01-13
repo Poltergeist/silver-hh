@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import EventCard from "../../../components/EventCard.astro";
+import { getCollection } from "astro:content";
+import { useTranslations } from "../../../i18n/utils";
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: "de" } },
+    { params: { lang: "en" } }
+  ];
+}
+
+const { lang } = Astro.params as { lang: 'de' | 'en' };
+const t = useTranslations(lang);
+
+const allEvents = await getCollection("events");
+const events = allEvents
+  .filter(e => e.data.lang === lang)
+  .sort((a,b) => b.data.date.getTime() - a.data.date.getTime());
+---
+<BaseLayout title={`${t('events.title')} – Silver HH`} lang={lang}>
+  <section class="card">
+    <h1>{t('events.title')}</h1>
+    <p>{t('events.subtitle')}</p>
+  </section>
+
+  <section style="margin-top:16px;display:flex;flex-direction:column;gap:12px;">
+    {events.map(entry => (
+      <EventCard entry={entry} lang={lang} />
+    ))}
+  </section>
+</BaseLayout>

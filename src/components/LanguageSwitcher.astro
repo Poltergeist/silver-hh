@@ -1,0 +1,39 @@
+---
+import { getLocalizedPath } from '../i18n/utils';
+
+interface Props {
+  currentLang: 'de' | 'en';
+  currentPath: string;
+}
+
+const { currentLang, currentPath } = Astro.props;
+const altLang = currentLang === 'de' ? 'en' : 'de';
+const altPath = getLocalizedPath(currentPath, altLang);
+---
+
+<a
+  href={altPath}
+  class="lang-switch"
+  aria-label={`Switch to ${altLang === 'de' ? 'German' : 'English'}`}
+>
+  {altLang.toUpperCase()}
+</a>
+
+<style>
+  .lang-switch {
+    display: inline-flex;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--silver);
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+
+  .lang-switch:hover {
+    background: rgba(92, 225, 230, 0.12);
+    border-color: rgba(92, 225, 230, 0.35);
+    color: var(--accent);
+  }
+</style>
