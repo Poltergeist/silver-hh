@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { useTranslations } from "../../i18n/utils";
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: "de" } },
+    { params: { lang: "en" } }
+  ];
+}
+
+const { lang } = Astro.params as { lang: 'de' | 'en' };
+const t = useTranslations(lang);
+---
+<BaseLayout title={`${t('about.title')} — Silver HH`} lang={lang}>
+  <section class="card">
+    <span class="badge">{t('about.badge')}</span>
+    <h1>{t('about.title')}</h1>
+    <p>
+      <strong>{t('about.missionTitle')}</strong>
+    </p>
+    <p>{t('about.missionText')}</p>
+  </section>
+
+  <section style="margin-top:16px;" class="card">
+    <h2>{t('about.affordableTitle')}</h2>
+    <p>{t('about.affordableText')}</p>
+  </section>
+
+  <section style="margin-top:16px;" class="card">
+    <h2>{t('about.charityTitle')}</h2>
+    <p>{t('about.charityText')}</p>
+  </section>
+
+  <section style="margin-top:16px;" class="card">
+    <h2>{t('about.communityTitle')}</h2>
+    <p>{t('about.communityText')}</p>
+  </section>
+
+  <section style="margin-top:16px;" class="card">
+    <h2>{t('about.joinUsTitle')}</h2>
+    <p>{t('about.joinUsText')}</p>
+    <a class="btn" href={`/${lang}/events`} style="margin-top:12px; display:inline-block;">
+      {t('about.viewEventsButton')}
+    </a>
+  </section>
+</BaseLayout>

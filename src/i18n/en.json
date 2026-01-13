@@ -82,5 +82,20 @@
     "purposeText": "Part of the data is collected to ensure error-free provision of the website. Other data may be used to analyze your user behavior.",
     "rightsTitle": "What rights do you have regarding your data?",
     "rightsText": "You have the right to receive information about the origin, recipient and purpose of your stored personal data free of charge at any time. You also have the right to request the correction or deletion of this data. If you have given consent to data processing, you can revoke this consent at any time for the future."
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "About Silver HH",
+    "missionTitle": "Our Mission",
+    "missionText": "Silver HH was founded with a simple vision: to create an accessible, affordable tournament series for Flesh and Blood in Hamburg while making a positive impact on our community.",
+    "affordableTitle": "Affordable Tournaments",
+    "affordableText": "We believe competitive Flesh and Blood should be accessible to everyone. By choosing the Silver Age format, we keep entry costs low while still providing a dynamic and strategic gameplay experience. Our tournament fees are fair and transparent, allowing more players to participate and grow the community.",
+    "charityTitle": "Playing for a Good Cause",
+    "charityText": "What makes Silver HH special is our commitment to the community beyond the game. All proceeds from our tournaments—every entry fee collected—are donated entirely to charitable causes. We carefully select local and international organizations that make a real difference, ensuring that every tournament delivers more than just great gameplay.",
+    "communityTitle": "Building a Welcoming Community",
+    "communityText": "The Hamburg Flesh and Blood community is diverse and passionate. Silver HH provides a space where new players are welcome, experienced players can compete, and everyone can benefit from a well-organized, fair, and transparent tournament series.",
+    "joinUsTitle": "Join Us",
+    "joinUsText": "Whether you're a seasoned player or just starting out, you're invited to be part of Silver HH. Come to one of our upcoming tournaments, meet the community, and play Flesh and Blood—knowing that with every game, you're contributing to something good.",
+    "viewEventsButton": "View upcoming events"
   }
 }
