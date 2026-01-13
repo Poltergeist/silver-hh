@@ -82,5 +82,20 @@
     "purposeText": "Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.",
     "rightsTitle": "Welche Rechte haben Sie bezüglich Ihrer Daten?",
     "rightsText": "Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen."
+  },
+  "about": {
+    "badge": "Über uns",
+    "title": "Über Silver HH",
+    "missionTitle": "Unsere Mission",
+    "missionText": "Silver HH wurde mit einer einfachen Vision gegründet: eine zugängliche, erschwingliche Turnierserie für Flesh and Blood in Hamburg zu schaffen und gleichzeitig einen positiven Einfluss auf unsere Community zu haben.",
+    "affordableTitle": "Erschwingliche Turniere",
+    "affordableText": "Wir glauben, dass kompetitives Flesh and Blood für jeden zugänglich sein sollte. Durch die Wahl des Silver Age Formats halten wir die Einstiegskosten niedrig, während wir ein dynamisches und strategisches Spielerlebnis bieten. Unsere Turniergebühren sind fair und transparent, sodass mehr Spieler teilnehmen und die Community wachsen kann.",
+    "charityTitle": "Spielen für einen guten Zweck",
+    "charityText": "Was Silver HH besonders macht, ist unser Engagement für die Community über das Spiel hinaus. Alle Einnahmen aus unseren Turnieren – jede Teilnahmegebühr – werden vollständig an wohltätige Zwecke gespendet. Wir wählen sorgfältig lokale und internationale Organisationen aus, die einen echten Unterschied machen, und stellen sicher, dass jedes Turnier mehr als nur großartiges Gameplay bietet.",
+    "communityTitle": "Eine einladende Community aufbauen",
+    "communityText": "Die Hamburger Flesh and Blood Community ist vielfältig und leidenschaftlich. Silver HH bietet einen Raum, in dem neue Spieler willkommen sind, erfahrene Spieler gegeneinander antreten können und alle von einer gut organisierten, fairen und transparenten Turnierserie profitieren können.",
+    "joinUsTitle": "Mach mit",
+    "joinUsText": "Egal, ob du ein erfahrener Spieler bist oder gerade erst anfängst, du bist eingeladen, an Silver HH teilzunehmen. Komm zu einem unserer kommenden Turniere vorbei, triff die Community und spiele Flesh and Blood – und wisse, dass du mit jedem Spiel etwas Gutes tust.",
+    "viewEventsButton": "Kommende Events ansehen"
   }
 }
