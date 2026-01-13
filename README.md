@@ -151,7 +151,31 @@ Common scopes for this project:
 
 ## Deployment
 
-This is a static site that can be deployed to any static hosting platform:
+This is a static site deployed to **GitHub Pages** with a custom domain.
+
+### Automated Deployment (GitHub Pages)
+
+The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch.
+
+**Setup Requirements:**
+
+1. **Enable GitHub Pages** in repository settings:
+   - Go to Settings → Pages
+   - Source: GitHub Actions
+   
+2. **Configure Custom Domain** (already configured):
+   - Custom domain: `silver-hh.click`
+   - CNAME file in `public/CNAME` (automatically deployed)
+   - DNS configuration: Add CNAME record pointing to `poltergeist.github.io`
+
+3. **Workflow** (`.github/workflows/deploy.yml`):
+   - Triggers on push to `main` branch
+   - Can also be manually triggered from Actions tab
+   - Builds site with `pnpm build`
+   - Deploys to GitHub Pages automatically
+
+**Manual Deployment:**
+You can manually trigger deployment from the GitHub Actions tab by selecting "Deploy to GitHub Pages" and clicking "Run workflow".
 
 ### Build for Production
 
@@ -161,12 +185,11 @@ pnpm build
 
 This generates static files in the `dist/` directory.
 
-### Deployment Platforms
+### Alternative Deployment Platforms
 
-Compatible with:
-- **Netlify** - Drop the `dist/` folder or connect your Git repository (build command: `pnpm build`)
+This site is also compatible with:
+- **Netlify** - Connect Git repository (build command: `pnpm build`)
 - **Vercel** - Import project and set build command to `pnpm build`
-- **GitHub Pages** - Deploy the `dist/` folder
 - **Cloudflare Pages** - Connect repository with build command `pnpm build`
 - Any static hosting service
 
