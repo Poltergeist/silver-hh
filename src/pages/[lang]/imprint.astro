@@ -19,16 +19,29 @@ const t = useTranslations(lang);
     <section style="margin-top:24px;">
       <h2>{t('imprint.responsibleTitle')}</h2>
       <p>
-        Silver HH<br>
-        Hamburg, Deutschland
+        {t('imprint.responsibleName')}<br>
+        <span>Kollaustraße 4</span><br>
+        <span>22529 Hamburg</span>
       </p>
     </section>
 
     <section style="margin-top:24px;">
       <h2>{t('imprint.contactTitle')}</h2>
       <p>
-        {t('imprint.email')}: <a href="mailto:info@silver-hh.click">info@silver-hh.click</a>
+        {t('imprint.email')}: <span id="email"></span>
       </p>
+      <script is:inline>
+        {
+          const user = 'silverhh';
+          const domain = 'sp3c1.com';
+          const email = user + '@' + domain;
+          const emailEl = document.getElementById('email');
+          const link = document.createElement('a');
+          link.href = 'mailto:' + email;
+          link.textContent = email;
+          emailEl.appendChild(link);
+        }
+      </script>
     </section>
 
     <section style="margin-top:24px;">
