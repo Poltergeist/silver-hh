@@ -2,7 +2,7 @@
   "nav": {
     "home": "Startseite",
     "events": "Events",
-    "standings": "Standings",
+    "standings": "Rangliste",
     "silverAge": "Silver Age",
     "about": "Über uns"
   },
@@ -11,7 +11,7 @@
     "title": "Silver HH",
     "subtitle": "Eine Turnierserie für Silver Age — kompetitive Spiele, klare Struktur und eine einladende Community in Hamburg, Deutschland.",
     "registerButton": "Für das nächste Event registrieren →",
-    "viewSchedule": "Zeitplan ansehen",
+    "viewSchedule": "Alle Events ansehen",
     "whatIsSilverAge": "Was ist Silver Age?",
     "nextEvent": "Nächstes Event",
     "silverAgeFormat": "Silver Age Format",
