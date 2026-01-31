@@ -29,10 +29,14 @@ const nextEvent = upcoming[0];
     <p>{t('homepage.subtitle')}</p>
 
     <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
-      {nextEvent?.data.registerUrl && (
+      {nextEvent?.data.registerUrl ? (
         <a class="btn primary" href={nextEvent.data.registerUrl}>
           {t('homepage.registerButton')}
         </a>
+      ) : (
+        <button class="btn primary" disabled style="opacity:0.5; cursor:not-allowed;">
+          {t('homepage.registerButton')}
+        </button>
       )}
       <a class="btn" href={`/${lang}/events`}>{t('homepage.viewSchedule')}</a>
       <a class="btn" href={`/${lang}/silver-age`}>{t('homepage.whatIsSilverAge')}</a>
